@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'main_app',                                  #En esta parte existe la jerarquia, por eso pusimos etsa al inicio
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
