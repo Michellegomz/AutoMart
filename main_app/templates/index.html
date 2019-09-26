@@ -6,11 +6,16 @@
 <body>
     <h1>Bienvenido a Automart LOGAN BB</h1>
     {% for auto in autos %}
-        <p>{{ auto.nombre }}</p>
-        <p>{{ auto.modelo }}</p>
-        <p>{{ auto.precio }}</p>
-        <p>{{ auto.color }}</p>
+        {% if auto.precio == 0 %}
+            <p>No disponible</p>
+            <hr>
+        {%else%}
+            <p>{{ auto.nombre }}</p>
+            <p>{{ auto.modelo }}</p>
+            <p>{{ auto.precio }}</p>
+            <p>{{ auto.color }}</p>
         <hr>
+        {%endif%}
     {% endfor %}
 </body>
 </html>
